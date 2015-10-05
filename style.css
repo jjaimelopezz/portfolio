@@ -1,6 +1,5 @@
 /*-----------------------------------------------------------------------------------*/
-/*	    My Site
-/*      Built with Blocs
+/*	    Jaime Portfolio_v2
 /*-----------------------------------------------------------------------------------*/
 
 body{
@@ -13,7 +12,7 @@ body{
 }
 a:hover{text-decoration: none; cursor:pointer;}
 
-button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
+a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
 
 
    
@@ -22,34 +21,15 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 /* Globals type styling */
  h1, h2, h3, h4, h5, h6, p, label, .btn, a{
 	font-family:Lato;
-	font-weight:300;
+	font-weight:400;
 }
 
 
 /* Site container width */
 
 .container{
-	max-width:1170px;
+	max-width:970px;
 }
-
-/* = Blocs
--------------------------------------------------------------- */
-
-.bloc{
-	width:100%;
-	clear:both;
-	background: 50% 50% no-repeat;
-	padding:0 50px;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-.bloc .container{
-	padding-left:0;
-	padding-right:0;
-}
-
 
 /* Sizes */
 
@@ -72,8 +52,36 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 	-o-background-size: auto!important;
 	background-size: auto!important;
 }
-.bg-b-edge{
-	background: bottom no-repeat;
+.bg-repeat{
+	background:repeat;
+}
+
+
+/* Video Background Styles */
+
+.video-bg-contianer, .bloc-video{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	right: -50%;
+	overflow: hidden;
+	transform: translateX(-50%);
+	-webkit-transform:translateX(-50%);
+}
+.bloc-video{
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 0;
+}
+
+
+/* Background Effects */
+
+.b-parallax{
+	background-attachment:fixed;
 }
 
 
@@ -164,6 +172,12 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 	color:rgba(0,0,0,.7);
 	border-color:rgba(0,0,0,.3);
 }
+
+/* Row Margin Offsets */
+
+.voffset{
+	margin-top:30px;
+}
 /* Dividers */
 
 .b-divider{
@@ -180,6 +194,8 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 }
 #hero-bloc h3{
 	font-size: 30px;
+	font-family: Lato;
+	font-weight: 300;
 }
 
 /* = NavBar
@@ -271,7 +287,7 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 .nav > li > .dropdown a{
 	background: none!important;
 	display: block;
-	padding: 15px 15px;
+	padding: 14px 15px;
 }
 
 nav .caret{
@@ -282,9 +298,7 @@ nav .caret{
 -------------------------------------------------------------- */
 
 .hero{
-	padding:150px 0;
-	position:relative;
-	display:inline-table;
+	padding-top:0;
 }
 .hero-nav{
 	position:absolute;
@@ -294,17 +308,14 @@ nav .caret{
 	right:0;
 }
 .v-center{
-	width:100%;
-	height: 100%;
-	display: table;
-	table-layout: fixed;
+	position: relative;
+	height: inherit;
 }
 .v-center .vc-content{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	width: 100%;
-	height: 100%;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
 }
 .hero .btn-dwn{
 	width: 58px;
@@ -325,10 +336,33 @@ nav .caret{
 .hero .btn-dwn:hover{
 	color: rgba(255,255,255,1);
 }
+/* = Sticky Nav
+-------------------------------------------------------------- */
+
+.sticky-nav.sticky{
+	position:fixed;
+	top:0;
+	z-index:1000;
+	box-shadow:0 1px 2px rgba(0,0,0,.3);
+	 transition: all .2s ease-out;
+}
+#hero-bloc .sticky{
+	background-color:rgb(0, 0, 0);
+	width:100%;
+	max-width: 100%;
+}
+#hero-bloc .sticky .navbar{
+	max-width: 1170px;
+	margin: 0 auto;
+}
 
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-sm{
+	margin-top:10px;
+	margin-bottom:5px;
+}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
@@ -382,6 +416,15 @@ button{
 }
 
 
+/* = Text Widths
+-------------------------------------------------------------- */
+.text-w-sm{
+	max-width:150px;
+}
+.text-center.text-w-sm, .text-center.text-w-md, .text-center.text-w-lg{
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 .panel-sq, .panel-sq .panel-heading, .panel-sq .panel-footer{
@@ -424,6 +467,100 @@ iframe{
 	margin: 0 4px -1px;
 }
 
+.no-shadows .carousel-control.left, .no-shadows .carousel-control.right{
+	background-image: none;
+}
+/* = Lightbox
+-------------------------------------------------------------- */
+
+a[data-lightbox]{
+	position: relative;
+	display: block;
+	text-align: center;
+}
+a[data-lightbox]:hover::before{
+	content:"+";
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+	font-size:32px;
+	width:50px;
+	height:50px;
+	margin-left:-25px;
+	border-radius: 50%;
+	background:rgba(0,0,0,.6);
+	color:#FFF;
+	font-weight:100;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+a[data-lightbox]:hover img{
+	opacity: 0.6;
+	-webkit-animation-fill-mode: none;
+	animation-fill-mode:none;
+}
+#lightbox-modal .modal-dialog{
+	width:90%;
+	max-width:900px;
+	margin:30px auto 0;
+}
+#lightbox-modal .modal-dialog img{
+	margin: 0 auto;
+}
+.lightbox-caption{
+	padding: 20px;
+	color: #FFF;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	left: 15px;
+	right: 15px;
+	bottom: 5px;
+}
+.close-lightbox{
+	display: none;
+	font-size: 40px;
+	position: absolute;
+	top:8px;
+	right:20px;
+	z-index: 20;
+}
+.next-lightbox, .prev-lightbox{
+	display: inline-block;
+	width:0;
+	height:0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	transition: all .2s ease-in-out;
+	position: absolute;
+	top:50%;
+}
+.next-lightbox{
+	right:25px;
+	border-left: 20px solid rgba(255,255,255,.4);
+}
+.prev-lightbox{
+	left:25px;
+	border-right:20px solid rgba(255,255,255,.4);
+}
+.prev-lightbox:hover, .next-lightbox:hover{
+	border-right-color:rgba(255,255,255,.9);
+	border-left-color:rgba(255,255,255,.9);
+}
+
+/* Framless */
+.frameless-lb{
+	border-radius: 0;
+}
+.frameless-lb .modal-body{
+	padding:0;
+}
+.frameless-lb .lightbox-caption{
+	left:0;
+	right:0;
+	bottom:-10px;
+}
+
 /* = Custom Colour Styling
 -------------------------------------------------------------- */
 
@@ -432,38 +569,20 @@ iframe{
 .bgc-white{
 	background-color:#ffffff;
 }
+.bgc-black{
+	background-color:#000000;
+}
 
 /* Bloc image backgrounds */
 
-.bg-dots-bg{
-	background-image:url("img/dots-bg.png");
-}
-.bg-highway{
-	background-image:url("img/highway.jpg");
-}
-.bg-lines-h-bg{
-	background-image:url("img/lines-h-bg.png");
-}
-.bg-grid-bg{
-	background-image:url("img/grid-bg.png");
-}
 .bg-map{
 	background-image:url("img/map.jpg");
 }
-.bg-IMG-4190{
-	background-image:url("img/IMG_4190.jpg");
+.bg-camera{
+	background-image:url("img/camera.jpg");
 }
-.bg-lines-h-bg{
-	background-image:url("img/lines-h-bg.png");
-}
-.bg-IMG-4190{
-	background-image:url('img/IMG_4190.jpg');
-}
-.bg-tracks{
-	background-image:url('img/tracks.jpg');
-}
-.bg-mountains{
-	background-image:url('img/mountains.jpg');
+.bg-IMG-6104{
+	background-image:url("img/IMG_6104.jpg");
 }
 
 
@@ -510,9 +629,6 @@ iframe{
         -o-background-size: auto 200%;
         background-size: auto 200%;
     }
-    .bloc, .bloc .text-right{
-        text-align: center!important;
-    }
     .b-parallax{
         background-attachment:scroll;
     }
@@ -537,6 +653,7 @@ iframe{
         border-bottom:1px solid rgba(0,0,0,.1);
         background:rgba(0,0,0,.05);
         text-align: left;
+        padding-left:15px;
         width:100%;
     }
     .nav > li:hover{
@@ -592,7 +709,7 @@ iframe{
         padding-right: 0;
     }
     .a-block{
-        text-align: center;
+        padding:0 10px;
     }
     .btn-dwn{
        display:none; 
@@ -609,8 +726,14 @@ iframe{
     form{
         padding:5px;
     }
+    .close-lightbox{
+        display:inline-block;
+    }
     .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .video-bg-contianer{
+        display:none;
     }
 }

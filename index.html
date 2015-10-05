@@ -4,87 +4,97 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <link rel="stylesheet" id="ppstyle" type="text/css" href="style.css">
-    <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/ionicons.min.css'/><link rel='stylesheet' href='./css/feather.min.css'/><link rel='stylesheet' href='./css/font-awesome.min.css'/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script src="./js/jquery-2.1.0.min.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/animations.js"></script>
+    <script src="./js/index.js"></script>
     
-    <title>My Website Portfolio - Aboutme</title>
+    <title></title>
 </head>
 <body>
 <!-- Main container -->
 <div class="page-container">
     
-<!-- Jumbotron -->
-<div id="hero-bloc" class="bloc hero bgc-white bg-IMG-4190 d-bloc">
-	<div class="container hero-nav bloc-sm">
-		<nav class="navbar row nav-center">
+<!-- jumbotron -->
+<div id="hero-bloc" class="bloc hero b-divider bgc-black d-bloc">
+	<div class="video-bg-contianer">
+		<video class="bloc-video" preload="auto" loop="loop" autoplay="autoplay">
+			<source src="vid/video-placeholder.mp4" type="video/mp4" />
+		</video>
+	</div>
+	<div class="container hero-nav sticky-nav">
+		<nav class="navbar row">
 			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">JLG</a>
 				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="navbar-collapse navbar-1 collapse in">
+			<div class="collapse navbar-collapse navbar-1">
 				<ul class="site-navigation nav navbar-nav pull-right">
 					<li>
+						<a id="pl-undefined" onclick="scrollToTarget('#about')">About</a>
 					</li>
 					<li>
-						<a class="animated fadeIn" id="pl-undefined" onclick="scrollToTarget('#about-me')">About Me</a>
+						<a onclick="scrollToTarget('#skills')" id="pl-undefined">Skills + Hobbies</a>
 					</li>
 					<li>
-						<a id="pl-undefined" class="animated fadeIn" onclick="scrollToTarget('#skills')">Skills</a>
-					</li>
-					<li>
-						<a id="pl-undefined" onclick="scrollToTarget('#gallery')" class="animated fadeIn">Gallery</a>
+						<a onclick="scrollToTarget('#gallery')" id="pl-undefined">Gallery</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</div>
-	<div class="v-center text-center">
-		<div class="vc-content">
-			<h1 class=" animated fadeIn animDelay04">
-				Hello, this is Jaime.
-			</h1>
-			<h3 class=" animated fadeIn animDelay06">
-				California native now living in Kentucky Blue.
-			</h3><br /><br /><br /><a id="scroll-hero" class="btn-dwn" onclick="scrollToTarget('#about-me')"><span class="fa fa-chevron-down pulse animated"></span></a>
+	<div class="v-center">
+		<div class="vc-content row">
+			<div class="col-sm-12">
+				<h1 class=" text-center fadeIn animDelay04 animated">
+					Hello, this is Jaime
+				</h1>
+				<h3 class=" text-center mg-lg fadeIn animDelay06 animated">
+					California native now living in Kentucky Blue.
+				</h3>
+			</div>
 		</div>
 	</div>
 </div>
-<!-- Jumbotron END -->
+<!-- jumbotron END -->
 
-<!-- about-me -->
-<div class="bloc l-bloc bgc-white" id="about-me">
+<!-- about -->
+<div class="bloc bgc-black d-bloc" id="about">
 	<div class="container bloc-lg">
 		<div class="row">
-			<div class="col-sm-6">
-				<img src="img/IMG_3311.jpg" class="img-circle center-block animated fadeIn animDelay02" width="392" height="360" />
-			</div>
-			<div class="col-sm-6">
-				<h2 class="mg-md animated fadeIn animDelay04">
+			<div class="col-sm-12">
+				<img src="img/IMG_3311.jpg" width="290" height="260" class="img-circle center-block fadeIn animDelay02 animated" />
+				<h3 class="mg-md text-center fadeIn animDelay02 animated">
 					About Jaime
-				</h2>
-				<p class="mg-lg animated fadeIn animDelay04">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+				</h3>
+				<p class="fadeIn animDelay04 text-center animated">
+					I am a 23 year old web developer with 2 years experience building websites. As an aspiring front-end developer and designer I code HTML5, CSS3, & JavaScript. Motivated and self-learner, I'm able to manage a project and deliver the best user experience by combining the latest web technologies.
+                    <br>
+                    <br>
+If the right opportunity arises I'm also available as a freelancer. <a href="mailto:jjaimelopezz@gmail.com"><b><em>Drop me a line</em></b></a> if you have an idea or just want to chat. 
+                    <br>
+                    <br>
+                    When I’m not working I’m most likely hiking and <a href="https://instagram.com/jjaimelopezz/"><b><em>photographing</em></b></a> on the streets of Louisville.
 				</p>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- about-me END -->
+<!-- about END -->
 
 <!-- skills -->
-<div class="bloc bgc-white bg-map d-bloc bg-b-edge" id="skills">
-	<div class="container bloc-lg">
-		<div class="row animated fadeIn">
+<div class="bloc bgc-white bg-camera d-bloc b-parallax" id="skills">
+	<div class="container bloc-md">
+		<div class="row">
 			<div class="col-sm-3">
 				<div class="text-center">
-					<span class="ion ion-social-html5 icon-round icon-md"></span>
+					<span class="ion ion-social-html5 icon-round icon-md pulse animDelay2 animated"></span>
 				</div>
 				<h3 class="text-center mg-md">
 					HTML
@@ -95,7 +105,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="text-center">
-					<span class="ion ion-social-css3 icon-round icon-md"></span>
+					<span class="ion ion-social-css3 icon-round icon-md pulse animDelay2 animated"></span>
 				</div>
 				<h3 class="text-center mg-md">
 					CSS
@@ -106,7 +116,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="text-center">
-					<span class="ion ion-social-javascript icon-round icon-md"></span>
+					<span class="ion ion-social-javascript icon-round icon-md pulse animDelay2 animated"></span>
 				</div>
 				<h3 class="text-center mg-md">
 					JavaScript
@@ -117,10 +127,10 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="text-center">
-					<span class="fa fa-camera icon-camera icon-aperture icon-global icon-desktop icon-browser icon-round icon-md"></span>
+					<span class="feather-icon icon-monitor icon-round icon-md pulse animDelay2 animated"></span>
 				</div>
 				<h3 class="text-center mg-md">
-					Photographer
+					Responsiveness
 				</h3>
 				<p class="text-center">
 					A little feature description could go here. A little feature description.
@@ -131,16 +141,75 @@
 </div>
 <!-- skills END -->
 
-<!-- gallery -->
-<div class="bloc l-bloc bgc-white" id="gallery">
+<!-- hobbies -->
+<div class="bloc bgc-white bg-map d-bloc b-divider b-parallax" id="hobbies">
 	<div class="container bloc-md">
 		<div class="row">
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-camera icon-round icon-md pulse animDelay2 animated"></span>
+				</div>
+				<h3 class="text-center mg-md">
+					Photographer
+				</h3>
+				<p class="text-center">
+					A little feature description could go here. A little feature description.
+				</p>
+			</div>
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-edit icon-round icon-md pulse animDelay2 animated"></span>
+				</div>
+				<h3 class="text-center mg-md">
+					Illustrator
+				</h3>
+				<p class="text-center">
+					A little feature description could go here. A little feature description.
+				</p>
+			</div>
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-android-walk icon-round icon-md pulse animDelay2 animated"></span>
+				</div>
+				<h3 class="text-center mg-md">
+					Hiker
+				</h3>
+				<p class="text-center">
+					A little feature description could go here. A little feature description.
+				</p>
+			</div>
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="fa fa-gamepad icon-round icon-md pulse animDelay2 animated"></span>
+				</div>
+				<h3 class="text-center mg-md">
+					Casual Gamer
+				</h3>
+				<p class="text-center">
+					A little feature description could go here. A little feature description.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- hobbies END -->
+
+<!-- gallery -->
+<div class="bloc bg-repeat bgc-black d-bloc" id="gallery">
+	<div class="container bloc-sm">
+		<div class="row">
 			<div class="col-sm-12">
-				<div id="carousel-1" class="carousel slide" data-ride="carousel">
+				<h3 class="text-center text-w-sm mg-sm">
+					Photo Gallery
+				</h3>
+				<p class="text-center">
+					A brief overview of my notable photo's
+				</p>
+				<div id="carousel-1" class="carousel slide no-shadows" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carousel-1" data-slide-to="0">
 						</li>
-						<li data-target="#carousel-1" data-slide-to="1">
+						<li data-target="#carousel-1" data-slide-to="1" class="active">
 						</li>
 						<li data-target="#carousel-1" data-slide-to="2">
 						</li>
@@ -150,12 +219,17 @@
 						</li>
 						<li data-target="#carousel-1" data-slide-to="5">
 						</li>
-						<li data-target="#carousel-1" data-slide-to="6" class="active">
+						<li data-target="#carousel-1" data-slide-to="6">
 						</li>
 					</ol>
 					<div class="carousel-inner">
 						<div class="item">
-							<img src="img/IMG_3680.jpg" />
+							<img src="img/IMG_4618.jpg" />
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item active">
+							<img src="img/IMG_4112.jpg" />
 							<div class="carousel-caption">
 							</div>
 						</div>
@@ -165,17 +239,17 @@
 							</div>
 						</div>
 						<div class="item">
-							<img src="img/IMG_4190.jpg" />
+							<img src="img/IMG_6808.jpg" />
 							<div class="carousel-caption">
 							</div>
 						</div>
 						<div class="item">
-							<img src="img/IMG_6104.jpg" />
+							<img src="img/IMG_6119.jpg" />
 							<div class="carousel-caption">
 							</div>
 						</div>
 						<div class="item">
-							<img src="img/IMG_4622.jpg" />
+							<img src="img/IMG_6340.jpg" />
 							<div class="carousel-caption">
 							</div>
 						</div>
@@ -184,47 +258,72 @@
 							<div class="carousel-caption">
 							</div>
 						</div>
-						<div class="item active">
-							<img src="img/IMG_6340.jpg" />
-							<div class="carousel-caption">
-							</div>
-						</div>
 					</div><a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#carousel-1" role="button" data-slide="next"><span class="fa fa-chevron-right"></span><span class="sr-only">Next</span></a>
 				</div>
+			</div>
+		</div>
+		<div class="row voffset">
+			<div class="col-sm-4">
+				<a href="#" data-lightbox="img/IMG_4150.jpg" data-frame="frameless-lb"><img src="img/IMG_4150.jpg" class="img-responsive" /></a>
+			</div>
+			<div class="col-sm-4">
+				<a href="#" data-lightbox="img/IMG_3680.jpg" data-frame="frameless-lb"><img src="img/IMG_3680.jpg" class="img-responsive" /></a>
+				<p class="text-left">
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<a href="#" data-lightbox="img/IMG_4622.jpg" data-frame="frameless-lb"><img src="img/IMG_4622.jpg" class="img-responsive" /></a>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- gallery END -->
 
-<!-- Footer -->
-<div class="bloc l-bloc bgc-white b-divider" id="bloc-5">
-	<div class="container bloc-lg">
+<!-- Footer - footer -->
+<div class="bloc bgc-black d-bloc" id="footer">
+	<div class="container bloc-sm">
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="img/sanfran.jpg" class="img-responsive" />
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				</p>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="https://twitter.com/beardedsailorr?lang=en" target="_blank"><span class="fa fa-twitter icon-md" data-placement="top" data-toggle="tooltip" title="@beardedsailorr"></span></a>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="img/valley.jpg" class="img-responsive" />
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				</p>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="https://www.facebook.com/jjaimelopezz" target="_blank"><span class="fa fa-facebook icon-md"></span></a>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="img/highway.jpg" class="img-responsive" />
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				</p>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="https://github.com/jjaimelopezz" target="_blank"><span class="fa fa-github icon-md"></span></a>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="https://www.linkedin.com/in/jjaimelopezz" target="_blank"><span class="fa fa-linkedin icon-md"></span></a>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="http://instagram.com/jjaimelopezz" target="_blank"><span class="fa fa-instagram icon-md" data-placement="top" data-toggle="tooltip" title="@jjaimelopezz"></span></a>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="http://steamcommunity.com/id/beardedsailor/" target="_blank"><span class="ion ion-steam icon-md" data-placement="top" data-toggle="tooltip" title="@BeardedSailor"></span></a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- Footer END -->
+<!-- Footer - footer END -->
 </div>
 <!-- Main container END -->
 
 </body>
+    
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->
+
 </html>
